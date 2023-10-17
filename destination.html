@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination</title>
+</head>
+<script>
+    function initialize() {
+        visitsOut = document.getElementById("visits");
+        if (!sessionStorage.numVisits) 
+            sessionStorage.numVisits = 0;
+        else 
+            sessionStorage.numVisits++;
+        
+        display();
+    } 
+    function display() {
+        visitsOut.innerHTML = sessionStorage.numVisits;
+    }
+</script>
+<body>
+    <h1> This is my Destination Page </h1> 
+    <h2>I have visited here <span id = "visits"></span> times.</h2>
+    <a href = "index.html">Return to the Home Page</a>
+</body>
+</html>
